@@ -1,4 +1,5 @@
 class Tashimoto {
+    
     constructor() {
 
         //this.sizeRadius = sizeRadius;
@@ -12,11 +13,6 @@ class Tashimoto {
 
     getColor() {
         
-    }
-
-    inView() {
-        
-
     }
 
     clicked() {

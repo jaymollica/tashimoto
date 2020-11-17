@@ -16,7 +16,11 @@ let palettes = [
 let colors;
 let capture;
 
+let gridUnit;
+let numSquares;
+
 function setup() {
+
     createCanvas(480,480);
     background("white");
     
@@ -24,10 +28,19 @@ function setup() {
     // capture.size(480, 480);
     // capture.hide();
 
-    let n = int(random(3,10));
+    gridUnit = Math.floor(random(4,6));
+
+    if(gridUnit == 4) {
+        numSquares = 15;
+    }
+    else {
+        numSquares = 24;
+    }
+
+    let n = int(random(gridUnit, (2.5 * gridUnit) ));
     for (let j = 0; j < n; j++) {
         while(true) {
-            let r = int(random(0,16));
+            let r = int(random(0, (numSquares + 1) ));
             if(forms.includes(r)) {
                 continue;
             }
@@ -38,6 +51,7 @@ function setup() {
         }
     }
 
+    
     colors = random(palettes);
     
 }
@@ -46,20 +60,20 @@ function prepareGrid() {
 
     let x = width;
     let y = height;
-    let u = width/4;
+    let u = width/gridUnit;
 
     let row = 0;
     let col = 0;
 
     let c = colors;
 
-    for (let i = 15; i >= 0; i--) {
+    for (let i = numSquares; i >= 0; i--) {
 
         if(forms.includes(i)) {
-            makeForm(width,x - (width/4 * col),x - (width/4 * row),u, c);
+            makeForm(width,x - (width/gridUnit * col),x - (width/gridUnit * row),u, c);
         }
 
-        if(i % 4 == 0) {
+        if(i % gridUnit == 0) {
             row++;
             col = 0;
         }
