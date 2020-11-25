@@ -78,10 +78,6 @@ function setup() {
         shuffle(forms);
         let halfForms = Math.ceil(forms.length / 3);    
         formsRev = forms.splice(0,halfForms);
-
-
-        console.log(forms);
-        console.log(formsRev);
     }
     
     colors = random(palettes);

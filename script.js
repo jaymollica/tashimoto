@@ -75,16 +75,16 @@ window.addEventListener('load', () => {
     }];
 
     document.getElementById('step1').innerHTML = "<h2>"+steps[0].question+"</h2>";
-    populateOptions(steps[0].options, "list1");
+    //populateOptions(steps[0].options, "list1");
 
     document.getElementById('step2').innerHTML = "<h2>"+steps[1].question+"</h2>";
-    populateOptions(steps[1].options, "list2");
+    //populateOptions(steps[1].options, "list2");
 
     document.getElementById('step3').innerHTML = "<h2>"+steps[2].question+"</h2>";
-    populateOptions(steps[2].options, "list3");
+    //populateOptions(steps[2].options, "list3");
 
     document.getElementById('step4').innerHTML = "<h2>"+steps[3].question+"</h2>";
-    populateOptions(steps[3].options, "list4");
+    //populateOptions(steps[3].options, "list4");
 
     function createOptionButtons() {
         for(let i=0;i<4;i++) {
